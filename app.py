@@ -26,3 +26,6 @@ def analyze_post(post: Post):
             risks["low"].append(f"Organization: {ent.text}")
 
     return {"risks": risks}
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("app:app", host="0.0.0.0", port=10000)
